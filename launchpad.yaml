@@ -1,0 +1,19 @@
+apiVersion: launchpad.mirantis.com/mke/v1.3
+kind: mke
+metadata:
+  name: my-mke-cluster
+spec:
+  hosts:
+  - ssh:
+      address: 10.138.0.3
+      user: devops
+      port: 22
+      keyPath: /home/devops/.ssh/id_rsa
+    role: manager
+  - role: worker
+  mke:
+    version: 3.3.5
+  mcr:
+    version: 20.10.15
+  cluster:
+    prune: false
