@@ -1,0 +1,28 @@
+  100  ansible-vault create play1.yml
+  101  touch /tmp/demo.txt
+  102  ls -ltr
+  103  cat play1.yml 
+  104  ansible-playbook play1.yml 
+  105  ansible-playbook play1.yml --ask-vault-pass
+  106  ls -ltr
+  107  cat play1.yml 
+  108  ansible-vault view play1.yml 
+  109  vi play1.yml 
+  110  ansible-vault edit play1.yml 
+  111  ansible-vault decrypt play1.yml 
+  112  cat play1.yml 
+  113  history
+  114  ls -ltr
+  115  cat hosts
+  116  ansible-vault encrypt hosts
+  117  ls -ltr
+  118  cat hosts
+  119  ls -ltr
+  120  cat play1.yml 
+  121  ansible-playbook play1.yml 
+  122  ansible-playbook play1.yml --ask-vault-pass
+  123  ansible-vault rekey hosts
+  124  ls -ltr
+  125  ansible-vault encrypt play1.yml 
+  126  ansible-playbook play1.yml --ask-vault-pass
+  127  ansible-vault decrypt play1.yml 
