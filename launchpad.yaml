@@ -5,14 +5,22 @@ metadata:
 spec:
   hosts:
   - ssh:
-      address: 10.138.0.3
+      address: 10.128.0.15
       user: devops
       port: 22
-      keyPath: /home/devops/.ssh/id_rsa
+      keyPath: ~/.ssh/id_rsa
     role: manager
-  - role: worker
+  - ssh:
+      address: 10.128.0.17
+      user: devops
+      port: 22
+      keyPath: ~/.ssh/id_rsa
+    role: worker
   mke:
-    version: 3.3.5
+    version: 3.6.1
+    installFlags:
+    - --admin-username=admin
+    - --admin-password=sekretstuff
   mcr:
     version: 20.10.15
   cluster:
